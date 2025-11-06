@@ -1,0 +1,727 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Navbar ===== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Espaçamento entre links e botão */
+  margin-left: auto; /* Faz o container ir para a direita */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: linear-gradient(145deg, #c8c8c8, #b3b4b6, #d4d4d4); /* metálico sutil */
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+}
+
+/* ===== Logo ===== */
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  color: #00113a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FFC857;
+  text-shadow: 0 0 6px rgba(255,200,87,0.4);
+}
+
+/* ===== Botão “Fale Conosco” ===== */
+.btn-contato.desktop-btn {
+  padding: 10px 22px;
+  background: linear-gradient(145deg, #00133f, #00266e);
+  color: #FFC857;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 11, 61, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-contato.desktop-btn:hover {
+  background: linear-gradient(145deg, #00266e, #003b9c);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ===== Hamburger (mobile) ===== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #00113a;
+}
+
+/* ===== Banner ===== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carrossel */
+.banner-carrossel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-carrossel .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.banner-carrossel .slide.active {
+  opacity: 1;
+}
+
+/* Overlay escuro elegante */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.65);
+  z-index: 1;
+  backdrop-filter: blur(1px);
+}
+
+/* Texto centralizado */
+.banner-conteudo {
+  position: relative;
+  z-index: 2;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.banner-conteudo h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.banner-conteudo p {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão */
+.btn-banner {
+  background-color: #333;
+  color: #f0f0f0;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  border: 1px solid #888;
+  transition: all 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #555;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Botão */
+.btn-banner {
+  background-color: #000b3d;
+  color: #FFC857;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #00084d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===== Serviços ===== */
+.servicos {
+  background: linear-gradient(135deg, #e5e5e5, #f9f9f9, #cfcfcf);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container-servicos {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicos h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  color: #000b3d;
+  margin-bottom: 10px;
+}
+
+.servicos .descricao {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.cards-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, #d6d6d6, #f4f4f4);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card i {
+  font-size: 45px;
+  color: #000b3d;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  color: #000b3d;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  border-color: #FFC857;
+}
+
+.card:hover i {
+  color: #FFC857;
+}
+
+/* ===== Sobre ===== */
+.sobre {
+  background: linear-gradient(145deg, #f0f0f0, #d6d6d6);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  color: #000b3d;
+  margin-bottom: 30px;
+}
+
+.sobre p {
+  font-family: 'Cooper Hewitt', sans-serif;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+/* ===== Contato ===== */
+.contato {
+  background: linear-gradient(135deg, #0a0f1c, #001030);
+  padding: 90px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.contato::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 70%),
+              radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 70%);
+  pointer-events: none;
+}
+
+.container-contato {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contato h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.6rem;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.2), -1px -1px 4px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+}
+
+.contato p {
+  font-family: 'Cooper Hewitt', sans-serif;
+  color: #e5e5e5;
+  margin: 10px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contato i {
+  color: #FFC857;
+  margin-right: 8px;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn-banner {
+  background-color: #000b3d;
+  color: #FFC857;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  transition: all 0.3s ease;
+  border: 1px solid #FFC857;
+}
+
+.btn-banner:hover {
+  background-color: #00084d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.mapa {
+  margin-top: 50px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+/* WhatsApp flutuante */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/*FOOTER*/
+.footer {
+  background: linear-gradient(135deg, #a2a4a9, #2f3238);
+  color: #e0e0e0;
+  padding: 40px 20px 20px;
+  font-family: 'Cooper Hewitt', sans-serif;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-col h3 {
+  font-family: 'Rajdhani', sans-serif;
+  color: #001030; /* pequeno destaque elétrico */
+;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #cfcfcf;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #FFC857;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin: 6px 0;
+}
+
+.footer i {
+  color: #FFC857;
+  margin-right: 6px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+  color: #b5b5b5;
+}
+
+
+/* ===== Responsividade 1024px ===== */
+@media (max-width: 1024px) {
+  .banner-conteudo h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-conteudo p {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin: 0 auto 25px;
+  }
+
+  .btn-banner {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsividade 768px*/
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* garante espaçamento entre logo e ícone */
+    align-items: center;
+    padding: 0 25px;
+    position: relative;
+  }
+
+  .logo {
+    margin-right: auto; /* empurra tudo pra direita */
+  }
+
+  .hamburger {
+    display: block;
+    order: 2;
+    margin-left: auto;
+    color: #00113a;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(145deg, #c8c8c8, #b3b4b6, #d4d4d4); /* mesma cor da navbar */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  /*======Banner=====*/
+   .banner {
+    height: 85vh; /* evita cortes de tela em celulares */
+    padding: 0 15px;
+  }
+
+  .banner-conteudo {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+
+  .banner-conteudo h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .banner-conteudo p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .btn-banner {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  /*====== SOBRE =====*/
+   .sobre {
+    padding: 60px 15px;
+  }
+
+  .sobre h2 {
+    font-size: 2rem;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; /* leitura mais natural em telas pequenas */
+  }
+
+ /*==== CONTATO ====*/
+ .contato {
+    padding: 70px 15px;
+  }
+
+  .contato h2 {
+    font-size: 2.2rem;
+  }
+
+  .contato p {
+    font-size: 1rem;
+  }
+
+  .btn-banner {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+  }
+
+  .mapa iframe {
+    height: 280px;
+  }
+/*==== WHATSAPP FLUTUANTE ====*/
+
+ .whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  /*==== FOOTER ====*/
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo {
+    height: 55px;
+  }
+
+  .footer-col h3 {
+    margin-top: 15px;
+  }
+
+  .footer-col ul li {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+    font-size: 0.8rem;
+  }
+
+}
+  /* Responsividade 480px*/
+@media (max-width: 480px) {
+  .banner {
+    height: 75vh; /* ainda mais compacto para telas muito pequenas */
+  }
+
+  .banner-conteudo h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-conteudo p {
+    font-size: 0.95rem;
+  }
+
+  .btn-banner {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+   /*====== SOBRE =====*/
+   .sobre {
+    padding: 50px 10px;
+  }
+
+  .sobre h2 {
+    font-size: 1.7rem;
+  }
+
+  .sobre p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+   /*==== CONTATO ====*/
+  .contato {
+    padding: 60px 10px;
+  }
+
+  .contato h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato p {
+    font-size: 0.95rem;
+  }
+
+  .mapa {
+    margin-top: 35px;
+  }
+
+  .mapa iframe {
+    height: 250px;
+  }
+
+  .btn-banner {
+    width: 100%;
+    display: inline-block;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /*==== WHATSAPP FLUTUANTE ====*/
+    .whatsapp {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    bottom: 15px;
+    right: 15px;
+  }
+  /*==== FOOTER ====*/
+   .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-col h3 {
+    font-size: 1rem;
+  }
+
+  .footer-col p,
+  .footer-col a {
+    font-size: 0.9rem;
+  }
+}
+
