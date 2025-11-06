@@ -386,6 +386,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   z-index: 1000;
   transition: transform 0.3s;
+   text-decoration: none;
 }
 
 .whatsapp:hover {
@@ -538,6 +539,10 @@
 
   .mobile-only {
     display: block;
+  }
+
+    .btn-contato.desktop-btn {
+    display: none;
   }
 
   /*======Banner=====*/
